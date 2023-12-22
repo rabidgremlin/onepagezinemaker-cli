@@ -6,7 +6,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt update &&\
     apt install -f -y  texlive-xetex
 
-COPY no_poster_zine.tex no_poster_zine.tex
+COPY *.tex /
 COPY makezine.sh makezine.sh
 RUN chmod +x makezine.sh
 
