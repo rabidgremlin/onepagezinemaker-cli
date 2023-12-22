@@ -3,17 +3,17 @@ Create a one page zine from a multi-page PDF using a CLI.
 Supply a PDF with 8 pages and an optional 1 page "poster" pdf.
 
 
-## Build the docker image
+## Build the docker image locally
 ```
-docker build -t rabidgremlin/onepagezinecli .
+docker build -t docker push rabidgremlin/onepagezinemaker-cli .
 ```
 
 ## Usage
 ```
 Usage Windows:
-              docker run  --rm -it -v "%cd%:/src" rabidgremlin/onepagezinecli <pages pdf> [poster pdf] <output pdf>
+              docker run  --rm -it -v "%cd%:/src" rabidgremlin/onepagezinemaker-cli <pages pdf> [poster pdf] <output pdf>
 Usage Linux/Mac OS:
-              docker run  --rm -it -v "$(pwd):/src" rabidgremlin/onepagezinecli <pages pdf> [poster pdf] <output pdf>
+              docker run  --rm -it -v "$(pwd):/src" rabidgremlin/onepagezinemaker-cli <pages pdf> [poster pdf] <output pdf>
 
 pages pdf: an 8 page pdf file containing the pages of the zine.
 poster pdf: an optional 1 page pdf file containing a poster to put on the back of the unfolded zine.

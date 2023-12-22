@@ -3,9 +3,9 @@
 # check that either two or three arguments were passed, print usage if not
 if [ $# -lt 2 ] || [ $# -gt 3 ]; then
     echo "Usage Windows:"
-    echo '              docker run  --rm -it -v "%cd%:/src" rabidgremlin/onepagezinecli <pages pdf> [poster pdf] <output pdf>'
+    echo '              docker run  --rm -it -v "%cd%:/src" rabidgremlin/onepagezinemaker-cli <pages pdf> [poster pdf] <output pdf>'
     echo "Usage Linux/Mac OS:"
-    echo '              docker run  --rm -it -v "$(pwd):/src" rabidgremlin/onepagezinecli <pages pdf> [poster pdf] <output pdf>'
+    echo '              docker run  --rm -it -v "$(pwd):/src" rabidgremlin/onepagezinemaker-cli <pages pdf> [poster pdf] <output pdf>'
     echo
     echo "pages pdf: an 8 page pdf file containing the pages of the zine."
     echo "poster pdf: an optional 1 page pdf file containing a poster to put on the back of the unfolded zine."
