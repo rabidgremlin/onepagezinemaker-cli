@@ -32,11 +32,12 @@ if [ $# -eq 3 ]; then
     cp /src/$2 /tmp/poster.pdf
 fi
 
+
 # if we have only two arguments then use a4_no_poster_zine.tex as the latex file, otherwise use a4_poster_zine.tex
 if [ $# -eq 2 ]; then
-    xelatex --output-directory=/tmp a4_no_poster_zine.tex 
-    cp /tmp/a4_no_poster_zine.pdf /src/$3
+    xelatex --output-directory=/tmp a4_no_poster_zine.tex || exit 1       
+    cp /tmp/a4_no_poster_zine.pdf /src/$2
 else
-    xelatex --output-directory=/tmp a4_with_poster_zine.tex 
+    xelatex --output-directory=/tmp a4_with_poster_zine.tex  || exit 1
     cp /tmp/a4_with_poster_zine.pdf /src/$3
 fi
